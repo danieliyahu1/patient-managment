@@ -11,6 +11,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseAssistantManager">
     <assistants>
+      <assistant-state connection-id="51f067ac-edc5-49e7-99ad-5d90e3439e9c" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
+        <messages />
+      </assistant-state>
       <assistant-state connection-id="2cc9356f-a9c4-4e7e-9acc-31aef2939654" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
         <messages />
       </assistant-state>
@@ -41,11 +44,26 @@
     <connection id="51f067ac-edc5-49e7-99ad-5d90e3439e9c" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="51f067ac-edc5-49e7-99ad-5d90e3439e9c" dataset="public.users" active-filter-id="016fa3f9-fbf3-4631-a5eb-346d94726635">
+      <filter id="79b22e70-7cc9-4ad7-8a92-7c133a87be8e" name="$2b$12$7hoRZfJrRKD2nIm2vHLs7OBETy.LWenXX..." temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="password" operator="=" value="$2b$12$7hoRZfJrRKD2nIm2vHLs7OBETy.LWenXXMLKf99W8M4PUwO6KB7fu" active="true" />
+      </filter>
+      <filter id="016fa3f9-fbf3-4631-a5eb-346d94726635" name="ADMIN" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="role" operator="!=" value="ADMIN" active="true" />
+      </filter>
+    </filter-actions>
     <filter-actions connection-id="2cc9356f-a9c4-4e7e-9acc-31aef2939654" dataset="public.patient" active-filter-id="EMPTY_FILTER">
       <filter id="202fdb01-a1ee-4f58-ac84-35bcd59526c2" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.FileConnectionMappingManager">
+    <mapping file-url="file://$PROJECT_DIR$/patient-service/src/main/resources/data.sql" connection-id="51f067ac-edc5-49e7-99ad-5d90e3439e9c" session-id="MAIN" current-schema="db" />
+    <mapping file-url="file://$PROJECT_DIR$/auth-service/src/main/resources/data.sql" connection-id="51f067ac-edc5-49e7-99ad-5d90e3439e9c" session-id="MAIN" current-schema="postgres" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -167,7 +185,7 @@
           <url-type value="DATABASE" />
           <host value="localhost" />
           <port value="5001" />
-          <database value="postgres" />
+          <database value="db" />
           <tns-folder value="" />
           <tns-profile value="" />
           <type value="USER_PASSWORD" />
